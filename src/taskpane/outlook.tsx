@@ -19,7 +19,13 @@ Office.onReady(info => {
 });
 
 export async function run() {
-  /**
-   * Insert your Outlook code here
-   */
+
+    Office.context.mailbox.item.body.setSelectedDataAsync("Hey!",
+        {coercionType: Office.CoercionType.Text},
+        (asyncResult) => {
+          if (asyncResult.status == Office.AsyncResultStatus.Failed) {
+            console.log("Error during insertion", asyncResult.error.message);
+          }}
+    );
+
 }
