@@ -1,4 +1,10 @@
-# Office-Addin-TaskPane
+# Office-Addin-TaskPane for test setSelectedDataSync bug
+
+This repository is solely for the purpose of testing a bug in the `setSelectedDataAsync` function of the Office add-in in Outlook on Big Sur.
+
+Outlook on Mac Version 16.45 (20120702)
+MacOS Big Sur Version 11.0.1
+
 
 This repository contains the source code used by the [Yo Office generator](https://github.com/OfficeDev/generator-office) when you create a new Office Add-in that appears in the task pane. You can also use this repository as a sample to base your own project from if you choose not to use the generator. 
 
