@@ -7,6 +7,8 @@
 import "../../assets/icon-16.png";
 import "../../assets/icon-32.png";
 import "../../assets/icon-80.png";
+import * as React from "react";
+import {renderToStaticMarkup} from "react-dom/server";
 
 /* global document, Office */
 
@@ -19,13 +21,13 @@ Office.onReady(info => {
 });
 
 export async function run() {
-
-    Office.context.mailbox.item.body.setSelectedDataAsync("Hey!",
-        {coercionType: Office.CoercionType.Text},
+    const variabile = renderToStaticMarkup(<span>123456</span>);
+    Office.context.mailbox.item.body.setSelectedDataAsync(variabile,
+        {coercionType: Office.CoercionType.Html},
         (asyncResult) => {
-          if (asyncResult.status == Office.AsyncResultStatus.Failed) {
-            console.log("Error during insertion", asyncResult.error.message);
-          }}
+            if (asyncResult.status == Office.AsyncResultStatus.Failed) {
+                console.log("Error during insertion", asyncResult.error.message);
+            }}
     );
 
 }
