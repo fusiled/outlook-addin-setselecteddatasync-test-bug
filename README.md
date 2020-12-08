@@ -5,6 +5,8 @@ This repository is solely for the purpose of testing a bug in the `setSelectedDa
 Outlook on Mac Version 16.45 (20120702)
 MacOS Big Sur Version 11.0.1
 
+This repository has been forked from [Office Addin Tamplate](https://github.com/OfficeDev/Office-Addin-TaskPane) with a small modification to demonstrate the issue.
+
 
 This repository contains the source code used by the [Yo Office generator](https://github.com/OfficeDev/generator-office) when you create a new Office Add-in that appears in the task pane. You can also use this repository as a sample to base your own project from if you choose not to use the generator. 
 
